@@ -1,18 +1,34 @@
 let cart =[]
 
-//getNameUser
+//getusersName
 const users = [];
 
 //register
-function register(UserName,Password){
+function register(userName,Password){
     const user = {
-        userName:UserName,
+        userName:userName,
         Password:Password,
         Walletbalance : 0
     };     
     users.push(user)
     console.log("สมัครสำเร็จ")
     }
+
+
+//ระบบล็อคอิน
+let currentUser = null;
+
+function login(userName,Password){
+    for(let i = 0; i < users.length; i++){
+        if(users[i].userName === userName && users[i].Password === Password){
+            currentUser = users[i];
+            console.log("Login สำเร็จ");
+            return;
+        }
+}
+ console.log("รหัสผิดจ่ะ")
+}
+
 
 
 
@@ -84,3 +100,7 @@ chooseItem(products);
 //สมัครสมาชิก
 register("bowvorn",1234);
 console.log(users)
+
+
+//ล็อคอินดูสิ eiei
+login("bowvorn",1234)
