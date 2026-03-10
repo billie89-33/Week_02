@@ -1,5 +1,4 @@
-My E-commerce Project
-ElectroShop
+
 
 
 # problem Statement
@@ -50,3 +49,4 @@ ElectroShop
 ซื้อสินค้าได้ทุกที่
 
 ## my ecommerce project
+ElectroShop
