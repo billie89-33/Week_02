@@ -1,5 +1,23 @@
 let cart =[]
 
+//getNameUser
+const users = [];
+
+//register
+function register(UserName,Password){
+    const user = {
+        userName:UserName,
+        Password:Password,
+        Walletbalance : 0
+    };     
+    users.push(user)
+    console.log("สมัครสำเร็จ")
+    }
+
+
+
+
+
 let ProductTvSamsung = {
     ProductId : "P001",
     ProductName : "Samsung Tv 55 inch",
@@ -49,6 +67,11 @@ function addCart(product){
     return `${product.ProductName} ${"price"} ${product.price}`;
 }
 
+
+
+
+
+
 ///โชว์ชื่อสินค้าทั้งหมด
 console.log(showcase.join(","));
 
@@ -57,3 +80,7 @@ console.log(addCart(ProductTvSamsung))
 
 ///แสดงDetailsสินค้าว่ามีอะไรบ้าง
 chooseItem(products);
+
+//สมัครสมาชิก
+register("bowvorn",1234);
+console.log(users)
