@@ -1,7 +1,10 @@
+//เก็บของในตะกร้าเขียนไว้ก่อนเผื่่อได้ทำ
 let cart =[]
 
 //getusersName
 const users = [];
+
+
 
 //register
 function register(userName,Password){
@@ -27,6 +30,17 @@ function login(userName,Password){
         }
 }
  console.log("รหัสผิดจ่ะ")
+}
+
+// ดูโปรไฟล์//ดึงcurrentUserมาใช้
+function showMyProfile(){
+    if(!currentUser) {
+        console.log("login ก่อน");
+        return; //สั่งหยุดถ้ายังไม่login
+    }
+    console.log("=======MyProfile=======");
+    console.log(`${"ชื่อ"} ${currentUser.userName}`);
+    console.log(`${"จำนวนเงิน"} ${currentUser.Walletbalance} ${"บาท"}`)
 }
 
 
@@ -102,5 +116,9 @@ register("bowvorn",1234);
 console.log(users)
 
 
-//ล็อคอินดูสิ eiei
+//ล็อคอินดูสิ eiei ถ้าจะล็ฮคเอาท์แค่เอาชื่ออกตอนนี้ทำได้แค่นี้
 login("bowvorn",1234)
+//ดูโปรไฟล์
+showMyProfile()
+
+ 
