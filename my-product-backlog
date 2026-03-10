@@ -1,0 +1,57 @@
+Authentication System
+Register   ผู้ใช้สมัครสมาชิก 
+Login      ผู้ใช้เข้าสู่ระบบ 
+Logout     ผู้ใช้ออกจากระบบ  
+
+
+
+User System
+Feature	        
+View Profile  	     ดูข้อมูลผู้ใช้
+Edit Profile	     แก้ไขข้อมูลผู้ใช้
+
+
+Store / Product System
+Feature     	
+View Store	            ดูหน้าร้าน
+View Product List	    ดูรายการสินค้า
+Product Detail          ดูรายละเอียดสินค้า
+Search Product	        ค้นหาสินค้า
+
+
+
+Cart System
+Add to Cart     เพิ่มสินค้าในตะกร้า
+View Cart	     ดูสินค้าที่อยู่ในตะกร้า
+Update Quantity	 เปลี่ยนจำนวนสินค้า
+Remove Item	     ลบสินค้าออกจากตะกร้า
+
+
+
+Order System 
+Checkout	    สั่งซื้อสินค้า
+Create Order	สร้างคำสั่งซื้อ
+Order History	ดูประวัติการสั่งซื้อ
+
+
+Payment 
+
+
+
+
+
+Flow ระบบ
+
+Register
+↓
+Login
+↓
+View Store
+↓
+View Product
+↓
+Add to Cart
+↓
+View Cart
+↓
+Checkout
