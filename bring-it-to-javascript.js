@@ -112,7 +112,7 @@ console.log(addCart(ProductTvSamsung))
 chooseItem(products);
 
 //สมัครสมาชิก
-register("bowvorn",1234);
+register("billie",1234);
 console.log(users)
 
 
