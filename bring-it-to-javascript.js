@@ -4,9 +4,9 @@ let cart =[]
 //getusersName
 const users = [];
 
+//
 
-
-//register
+register
 function register(userName,Password){
     const user = {
         userName:userName,
@@ -70,7 +70,6 @@ let ProductWashingMachine = {
 }
 
 
-
 const products = [
   ProductTvSamsung,
   ProductHeadphones,
@@ -112,7 +111,7 @@ console.log(addCart(ProductTvSamsung))
 chooseItem(products);
 
 //สมัครสมาชิก
-register("billie",1234);
+register("bowvorn",1234);
 console.log(users)
 
 
