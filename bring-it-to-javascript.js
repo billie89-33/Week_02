@@ -1,40 +1,39 @@
 //เก็บของในตะกร้าเขียนไว้ก่อนเผื่่อได้ทำ
-let cart =[]
+let cart = []
 
 //getusersName
 const users = [];
 
-//
-
-register
-function register(userName,Password){
+//สมัครสมาชิกregister
+function register(userName, Password) {
     const user = {
-        userName:userName,
-        Password:Password,
-        Walletbalance : 0
-    };     
+        userName: userName,
+        Password: Password,
+        Walletbalance: 0
+    };
     users.push(user)
     console.log("สมัครสำเร็จ")
-    }
+}
+
 
 
 //ระบบล็อคอิน
 let currentUser = null;
 
-function login(userName,Password){
-    for(let i = 0; i < users.length; i++){
-        if(users[i].userName === userName && users[i].Password === Password){
+function login(userName, Password) {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].userName === userName && users[i].Password === Password) {
             currentUser = users[i];
             console.log("Login สำเร็จ");
             return;
         }
-}
- console.log("รหัสผิดจ่ะ")
+    }
+    console.log("รหัสผิดจ่ะ")
 }
 
 // ดูโปรไฟล์//ดึงcurrentUserมาใช้
-function showMyProfile(){
-    if(!currentUser) {
+function showMyProfile() {
+    if (!currentUser) {
         console.log("login ก่อน");
         return; //สั่งหยุดถ้ายังไม่login
     }
@@ -44,6 +43,85 @@ function showMyProfile(){
 }
 
 
+let numbers = [1,2,3,4,5,6];
+
+//methodfilter Array
+let nmw = numbers.filter(n => n % 2 === 0);
+let nnn = numbers.filter((n) =>{
+        return n % 2 !== 0;
+});
+
+console.log(nnn)
+console.log(nmw)
+
+
+
+//พื้นฐานfilter function + loop + push =>array
+function getNumber(numbers){
+
+   let result = [];
+
+   for(let i = 0; i < numbers.length; i++){
+
+      if(numbers[i] % 2 === 0){
+         result.push(numbers[i]);
+      }
+
+   }
+
+   return result;
+}
+
+let result1 = getNumber(numbers);
+
+console.log(result1);
+
+
+
+
+//แสดงแบบไม่มีarray
+function findOdd(numbers){
+for(let i = 0; i < numbers.length; i++){
+   if(numbers[i] % 2 !== 0){
+      console.log(numbers[i]);
+   }
+}
+};
+
+findOdd(numbers)
+
+
+//แสดงเลขในarray
+function findOdd1(numbers){
+
+   let result = [];
+
+   for(let i = 0; i < numbers.length; i++){
+      if(numbers[i] % 2 !== 0){
+         result.push(numbers[i]);
+      }
+   }
+
+   return result;
+}
+
+let odd = findOdd1(numbers);
+
+console.log(odd);
+
+
+
+
+
+
+let users1 = [
+ {name:"A", age:20},
+ {name:"B", age:25}
+];
+
+let names = users1.map(u => u.age);
+
+console.log(names);
 
 
 
@@ -53,21 +131,21 @@ let ProductTvSamsung = {
     ProductName : "Samsung Tv 55 inch",
     price : 5000,
     Stock : 10
-}
+};
 
 let ProductHeadphones = {
     ProductId : "P002",
     ProductName : "Sony Headphones",
     price : 2000,
     Stock : 20
-}
+};
 
 let ProductWashingMachine = {
     ProductId : "P003",
     ProductName : "Samsung Washing machine",
     price : 2500,
     Stock : 5
-}
+};
 
 
 const products = [
@@ -84,19 +162,26 @@ const showcase = [
 
 //เลือกสินค้า
 function chooseItem(products) {
-    for(let i = 0; i < products.length; i++){
-     console.log( ` ${i+1} ${products[i].ProductName} ${"ราคา"} ${products[i].price}` );
-     
+    for (let i = 0; i < products.length; i++) {
+        console.log(` ${i + 1} ${products[i].ProductName} ${"ราคา"} ${products[i].price}`);
+
     }
-} 
+}
 
 
-function addCart(product){
+function addCart(product) {
     cart.push(product);
     return `${product.ProductName} ${"price"} ${product.price}`;
 }
 
 
+
+const addtolist = (item , list) => {
+    return list.push(item)
+};
+
+const result = addtolist("B",["A"]);
+console.log(result);
 
 
 
@@ -120,4 +205,3 @@ login("bowvorn",1234)
 //ดูโปรไฟล์
 showMyProfile()
 
- 
