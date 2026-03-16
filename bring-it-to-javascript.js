@@ -42,8 +42,10 @@ function showMyProfile() {
     console.log(`${"จำนวนเงิน"} ${currentUser.Walletbalance} ${"บาท"}`)
 }
 
-
+//ประกาศตัวแปล
 let numbers = [1,2,3,4,5,6];
+
+
 
 //methodfilter Array
 let nmw = numbers.filter(n => n % 2 === 0);
@@ -79,6 +81,13 @@ console.log(result1);
 
 
 
+
+
+
+
+
+
+
 //แสดงแบบไม่มีarray
 function findOdd(numbers){
 for(let i = 0; i < numbers.length; i++){
@@ -105,13 +114,33 @@ function findOdd1(numbers){
    return result;
 }
 
+//เอาfunction มายัดใส่ odd
 let odd = findOdd1(numbers);
 
 console.log(odd);
 
 
 
+let max = numbers[0];
 
+for(let i=1;i<numbers.length;i++){
+   if(numbers[i] > max){
+      max = numbers[i];
+   }
+}
+
+console.log(max);
+
+
+
+
+
+//method.reduce = count
+let count = numbers.reduce(function(total){
+   return total + 1;
+},0);
+
+console.log(count)
 
 
 let users1 = [
